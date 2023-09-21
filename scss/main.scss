@@ -26,6 +26,40 @@ body {
   font-size: 1.6rem;
 }
 
+@mixin tablet {
+  @media screen and (max-width: 900px) {
+    transition: 0.9s;
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 901px) {
+    transition: 0.9s;
+    @content;
+  }
+}
+
+@mixin description() {
+  .info {
+    &__title {
+      text-align: center;
+      color: $primary-tex;
+      text-transform: uppercase;
+    }
+    &__description {
+      text-align: justify;
+      margin: 1.6rem auto;
+      @include tablet() {
+        max-width: 610px;
+      }
+      @include desktop() {
+        max-width: 890px;
+      }
+    }
+  }
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -63,6 +97,9 @@ body {
 .main {
   margin-top: 8rem;
   padding: 1.6rem;
+  article {
+    @include description();
+  }
 }
 
 footer {
