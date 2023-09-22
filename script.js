@@ -15,17 +15,19 @@ function getHealthSection() {
       //   img: `./assets/img/products/toothbrush.jpg`,
       img: ``,
     },
-    {
-      title: `Cepillo de bambú`,
-      description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
-      img: ``,
-    },
-    {
-      title: `Cepillo de bambú`,
-      description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
-      img: ``,
-    },
+    // {
+    //   title: `Cepillo de bambú`,
+    //   description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
+    //   img: ``,
+    // },
+    // {
+    //   title: `Cepillo de bambú`,
+    //   description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
+    //   img: ``,
+    // },
   ];
+
+  printHealthSection();
 }
 
 function printHealthSection() {
