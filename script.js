@@ -12,18 +12,32 @@ function getHealthSection() {
     {
       title: `Cepillo de bambú`,
       description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
-      //   img: `./assets/img/products/toothbrush.jpg`,
-      img: ``,
+      img: `./assets/img/products/toothbrush.jpg`,
     },
     {
-      title: `Cepillo de bambú`,
-      description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
-      img: ``,
+      title: `Crema para manos`,
+      description: `Crema hidratante con eucalipto ayuda al cuidado de la piel.`,
+      img: `./assets/img/products/hand-cream.jpeg`,
     },
     {
-      title: `Cepillo de bambú`,
-      description: `Paquete de 2 unidades hecho 100% de materiales ecológicos.`,
-      img: ``,
+      title: `Serum hidratante`,
+      description: `Sérum hecho a base de extractos naturales y ácido hialurónico.`,
+      img: `./assets/img/products/serum.jpg`,
+    },
+    {
+      title: `Kit de viaje`,
+      description: `Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño de viaje.`,
+      img: `./assets/img/products/organic-kit.jpg`,
+    },
+    {
+      title: `Set de jabones`,
+      description: `Paquete de 2 unidades jabón de carbón activado con coco.`,
+      img: `./assets/img/products/organic-soap.jpg`,
+    },
+    {
+      title: `Kit de skincare`,
+      description: `Incluye 2 rodillos y una gua sha.`,
+      img: `./assets/img/products/guasha-kit.jpg`,
     },
   ];
 
@@ -39,8 +53,8 @@ function printHealthSection() {
     htmlHealth += `<img src="${heal.img}" alt="health img" />`;
     htmlHealth += `</div>`;
     htmlHealth += `<div class="card__info">`;
-    htmlHealth += `<h3 class="card__info-title">${heal.title}</h3>`;
-    htmlHealth += `<p class="card__info-description">${heal.description}</p>`;
+    htmlHealth += `<h3 class="title">${heal.title}</h3>`;
+    htmlHealth += `<p class="description">${heal.description}</p>`;
     htmlHealth += `</div>`;
     htmlHealth += `<button class="card__button">`;
     htmlHealth += `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
