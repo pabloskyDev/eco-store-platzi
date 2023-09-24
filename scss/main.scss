@@ -1,7 +1,7 @@
 $dark-primary-color: #455a64;
 $light-primary-color: #cfd8dc;
 $primary-color: #607d8b;
-$accent-color: #03a9f4;
+$accent-color: #088395;
 $custom-white: #ffffff;
 $primary-tex: #212121;
 $secondary-text: #757575;
@@ -17,6 +17,7 @@ $font-stack: "IBM Plex Sans", sans-serif;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,6 +76,7 @@ body {
         -moz-box-shadow: 0px 17px 13px 0px rgba(33, 33, 33, 0.26);
         box-shadow: 0px 17px 13px 0px rgba(33, 33, 33, 0.26);
         &:hover {
+          background: $accent-color;
           box-shadow: 0px 0px 13px 0px $light-primary-color;
           cursor: pointer;
         }
@@ -113,9 +115,8 @@ body {
     }
     &__grid {
       display: grid;
-      grid-template-columns: repeat(3, auto);
-      grid-template-rows: repeat(2, 1fr);
-      row-gap: 1.6rem;
+      grid-template-columns: repeat(6, auto);
+      grid-template-rows: 1fr;
       column-gap: 1.6rem;
       overflow-x: scroll;
       overscroll-behavior-x: contain;
@@ -123,12 +124,28 @@ body {
       &::-webkit-scrollbar {
         display: none;
       }
+      padding-right: 0.8rem;
+      padding-bottom: 0.8rem;
+      @include tablet() {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 1.6rem;
+      }
+      @include desktop() {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 1.6rem;
+      }
       .card {
         scroll-snap-align: center;
         background: $light-primary-color;
         border-radius: 1rem;
         padding: 3.5rem 1.6rem 1.5rem;
         width: 30rem;
+        @include tablet() {
+          width: 100%;
+          margin: 0 auto;
+        }
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
@@ -145,6 +162,12 @@ body {
             height: 100%;
             object-fit: cover;
             border-radius: 0.5rem;
+            // Todo implements in gallery
+            // filter: blur(0.5rem);
+            // &:hover {
+            //   filter: none;
+            //   transition: 0.6s;
+            // }
           }
         }
         &__info {
@@ -185,6 +208,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0rem;
+  z-index: 1;
   height: 8rem;
   background-color: $dark-primary-color;
   color: $custom-white;
