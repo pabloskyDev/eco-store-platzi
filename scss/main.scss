@@ -109,6 +109,7 @@ body {
     &__subtitle {
       color: $custom-white;
       text-transform: uppercase;
+      text-align: center;
     }
     &__grid {
       display: grid;
@@ -230,4 +231,20 @@ body {
 
 footer {
   background-color: $light-primary-color;
+}
+
+/* Set scroll bar styles*/
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $light-primary-color;
+  border-radius: 0.7rem;
+}
+::-webkit-scrollbar-thumb {
+  background: $secondary-text;
+  border-radius: 0.7rem;
+  &:hover {
+    background: $dark-primary-color;
+  }
 }
